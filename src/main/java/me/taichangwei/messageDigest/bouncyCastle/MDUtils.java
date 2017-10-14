@@ -25,7 +25,6 @@ public class MDUtils {
 
     }
 
-    //=======================MD相关======================
     public static String getMD2(String src) {
         return getDigest(src, new MD2Digest());
     }

@@ -15,7 +15,7 @@ public class MessageDigestUtilsTest {
     @Before
     public void init() {
         src = "Hello, Word!";
-        System.out.println("=========源字符串字符：" + src + "===========");
+        System.out.println("=========源字符串字符：" + src);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class MessageDigestUtilsTest {
         String md4Str = MDUtils.getMD4(src, null);
         System.out.println("JDK_MD4摘要字符串：" + md4Str);
 
-        String sha224Str = MDUtils.getSHA224(src);
+        String sha224Str = MDUtils.getSHA224(src, null);
         System.out.println("JDK_SHA224摘要字符串：" + sha224Str);
 
 
@@ -118,12 +118,6 @@ public class MessageDigestUtilsTest {
         Assert.assertNotNull(sha256Str);
         Assert.assertNotNull(sha384Str);
         Assert.assertNotNull(sha512Str);
-    }
-
-    @Test
-    public void getMDOn22(){
-        String sha224Str = MDUtils.getSHA224(src);
-        System.out.println("JDK_SHA224摘要字符串：" + sha224Str);
     }
 
 }

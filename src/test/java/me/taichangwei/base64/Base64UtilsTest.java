@@ -14,8 +14,8 @@ public class Base64UtilsTest {
 
     @Before
     public void init() {
-        src = "taichangwei";
-        System.out.println("=========源字符串字符：" + src + "===========");
+        src = "Hello, Word!";
+        System.out.println("=========源字符串字符：" + src);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class Base64UtilsTest {
         System.out.println("JDK编码字符串：" + encodedStr);
         System.out.println("JDK解码字符串：" + decodedStr);
 
-        Assert.assertEquals("taichangwei", decodedStr);
+        Assert.assertEquals(src, decodedStr);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class Base64UtilsTest {
         System.out.println("CC编码字符串：" + encodedStr);
         System.out.println("CC解码字符串：" + decodedStr);
 
-        Assert.assertEquals("taichangwei", decodedStr);
+        Assert.assertEquals(src, decodedStr);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class Base64UtilsTest {
         System.out.println("BC编码字符串：" + encodedStr);
         System.out.println("BC解码字符串：" + decodedStr);
 
-        Assert.assertEquals("taichangwei", decodedStr);
+        Assert.assertEquals(src, decodedStr);
     }
 
 }
